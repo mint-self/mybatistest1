@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 333
+    url: jdbc:mysql://127.0.0.1:3306/mall?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false
+  rabbitmq:
+    addresses: 192.168.153.139
+    port: 15672
+    username: admin
+    password: 123
+
+logging:
+  pattern:
+    console: "[%thread] %-5level %logger{36} - %msg%n"
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mappers/*.xml
+
+wx:
+  appId: wx3e6b9f1c5a7ff034
+  mchId: 1614433647
+  mchKey: Aa111111111122222222223333333333
+  notifyUrl: http://hg2kqf.natappfree.cc/pay/notify
+  returnUrl: http://127.0.0.1
+
+alipay:
+  appId: 2021003115605474
+  privateKey: "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDLB/0LyITaV5Wkw9hkx6HHhM3dKWoY00+qj5Q0IGvFOxn947tojIsRJG4sGNhjxAvDab4StUP4B2Nymdf05TmZiA4yuf0av+lmbIGI+SP6rBMBE2DAGna/VaUI6d/ICcJqn1oAsY3tIZKse10K7mrvyWSVPY8Ugb1yEEudmztlj60wgdbMRLRaQmdXR4njK3joGV1bLQ1Q7Z0lLoeSizrqFzk7BZhfLRGaCwMNG26RZ3dNG61TAB1VsZdhubImOauXE2D7lIJKODGyMtZr6GXNiBYQqBw+bPSVrFXNky+3lcyal/adfVeHlXWpwKf8e2erEICqdPRh3FsBX48eEpfPAgMBAAECggEAC8NRuN4MPG44oEwsfGJIkDu0hazBleCgS/x3lLGQLOQotFn+YKdL41ld/LYPy2/vUooM1h6kanlbHKenKGwjcy67y9qUvHkD98gvlRUCLaLMkxJhV5/w41L99c8/BOLz3aOP3lxrIaMBUXbwRBLeJThg2HixknmV1Ub2apI01cRrx34/oQBM7vZHtVNcDw33mF64rchyJUG1yleKsYT/CWRV3W6+Q7iHTiIhgV2626/d6gXjb6c8bNPTAVbvgxr2X3jBnT8P4XfqgL84c2n94QcXpd8vFX4uHFZbJFDFFj8NQC+g2tsMzoakVpAKNJnLbcV94JTiPG462r1tuaumeQKBgQDyiS62x28DY/FVu7z/8Vupd1HZtN+bzJ8j9fg2fYePYx6Wpq1yhJmALbttGbdVrj8TLWq8oMzX1xNrYkmH8b5XJMGQwSqyZbfrTXFK6piJcpa5gI7cIMEkTBPrETeUnkN56LaiGX5pmo6ptsJrAzw3hb072KcC/QKVDLmOTXZZ+wKBgQDWTWHh1tug9y3DFoOARn3ZZW5hKcQtgiili1rsnqSRaKx/q7LZtBe2ddr4fNkPBAK6s1ue8c0OEdmU5RSMgMVk3kC/+rjBF2sKAao0Jrwew6aLoCgEzoAVbV1kBAhypRPKJmSY6nuupUJ5WAhd94+wAaohsBwY0H3bvCFJOBPFPQKBgQDDT4W221Oiv1ERYWYKFitihRv83ZNUu6tMIkAIYX5REdkIKKF0nyOd/TX53cOt0+wnXWOfEz7icejJiRT9zMcjFg5qq6PeldtOOccKNXEw/n4yVDy3OAlRWZKQsgS4QdrEyYqJb05FbJmGQg6+bpSHgcOp9gZIeccikGS9G9Q7EQKBgDaHkjSJG3Gl87sEa4mkZjl/GcsXeZeq2vTktMoow+9MFziVU/kZXj9LVeCMxB6SAq/HG7UiCe9ek2LTt5rY2WGFPCyde42Gi/IL4mdKw+uAFUzJ/+TZNrY9Edp1PEEPyC1T/5z5bWdPHc8Km3Ztm95JTiUsTrnxs1TKVh3vavhxAoGBAPAFUCA62+gTzdL1mvQs/N2E0l/ntGYKL2OyFImOIrMUcLEpm0sSNLtc8whzNdFA+rOGCxhtsIIMyQ7KK2NWEku57ZTGcUnU/iL6IImcjqXHzSsbG7Ab/mejVrU16CqarXq+em2D1MvUiplknC2lexeBU/rbm6Smma4CCo+9/wgJ"
+  publicKey: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhEqcd8WMIpk6b6ru4NZ6eHZh22WKd1UaK6efULU/dTG2KOmKAypm+ZxaN1v36G/DlKZCYZxuoQAViY9CEeUX/hPAaM3pGW1Aji5NCIaRqQ+vZ+GXwI13+afepTkdxRCTW4cC3AOgL3HA1QgX3CCZ+WYP4oZFRICK2P3ssOXlvqZscA6IiQTKHSNIYM7p56jsv0JSekKR2A9l3tRb22EsouKFPZu2LjB9PqHhFe6gB9VemSldQ1aMSqG7ut5EvIt7ZCghoJixnN4xMAH+4Bo2boJl/OZQK0pWdAQ0fzlyOedxWpUWj3zyvWoeDBp0eIBrIFB83ad4iXbhl8zKDLlnyQIDAQAB"
+  notifyUrl: http://hg2kqf.natappfree.cc/pay/notify
+  returnUrl: http://127.0.0.1
